@@ -1,0 +1,32 @@
+{
+  "name": "mocked-fetch",
+  "version": "1.0.0",
+  "description": "mock fetch api's for quicker app development",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "rm -r ./dist && tsc && node ./dist/spec/test.js"
+  },
+  "files": [
+    "/dist"
+  ],
+  "keywords": [
+    "mock",
+    "apis",
+    "local",
+    "mock",
+    "data"
+  ],
+  "author": "SkillRazr",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tukuna30/is-number-ts.git"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "@types/node-fetch": "^2.6.2"
+  }
+}
