@@ -1,9 +1,9 @@
 {
   "name": "mocked-fetch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "mock fetch api's for quicker app development",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/mockedFetch.js",
+  "types": "dist/mockedFetch.d.ts",
   "scripts": {
     "test": "rm -r ./dist && tsc && node ./dist/spec/test.js"
   },
