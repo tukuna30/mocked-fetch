@@ -1,6 +1,6 @@
 {
   "name": "mocked-fetch",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "mock fetch api's for quicker app development",
   "main": "dist/mockedFetch.js",
   "types": "dist/mockedFetch.d.ts",
