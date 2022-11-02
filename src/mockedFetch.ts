@@ -1,4 +1,4 @@
-import { getAllTodos, getTodo } from './todos';
+import { getAllTodos, getTodo, addNewTodo, deleteTodo, updateTodo } from './todos';
 
 const removeTrailingSlash = (input:string) => {
   return input[input.length-1] === '/' ? input.slice(0, input.length-1) : input;
@@ -18,6 +18,11 @@ export const mockedFetch = (url:string, options: Record<string,string | any>={})
   const newUrl = removeTrailingSlash(url);
 
   if (newUrl === 'https://skillrazr.com/todos') {
+
+    if (method === 'POST') {
+      return addNewTodo(options.body);
+    }
+
     return getAllTodos();
   }
 
@@ -31,6 +36,11 @@ export const mockedFetch = (url:string, options: Record<string,string | any>={})
     const itemId = parseInt(match[0]);
 
     if (newUrl === 'https://skillrazr.com/todos') {
+      if (method === 'DELETE') {
+        return deleteTodo(itemId);
+      } else if (method === 'PUT') {
+        return updateTodo(itemId, options.body)
+      }
       return getTodo(itemId);
     }
   }
