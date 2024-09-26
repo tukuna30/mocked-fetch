@@ -1,0 +1,1 @@
+#Method mockedFetched is a custom method 
